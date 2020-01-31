@@ -1,0 +1,28 @@
+<h1>Question # 1</h1>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>Value 1:</label>
+    <input type="number" formControlName="value1"/>
+  </div>
+
+  <div>
+    <label>Value 2:</label>
+    <input type="number" formControlName="value2"/>
+  </div>
+
+  <button [disabled]="formGroup.invalid">Calculate</button>
+
+</form>
+
+<div>
+  <label>Result:</label>
+  <span>{{result}}</span>
+</div>
+
+<h1>Question # 2</h1>
+
+<ng-container *ngFor="let course of courses">
+  <div>{{course.title}} - {{course.courseType}}</div>
+</ng-container>
